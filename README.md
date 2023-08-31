@@ -1,4 +1,4 @@
-# report-openssl-decoders-no-error-raised
+# report-openssl-fips-decoders-no-error-raised
 
 How to use
 
