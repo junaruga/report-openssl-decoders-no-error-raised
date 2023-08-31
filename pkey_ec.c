@@ -92,6 +92,7 @@ int main(int argc, char *argv[])
     }
     memset(pkey_file_path, 0x00, sizeof(pkey_file_path));
     strncpy(pkey_file_path, argv[1], strlen(argv[1]));
+    printf("pkey_file_path: %s\n", pkey_file_path);
     if (argc >= 3) {
         memset(pass, 0x00, sizeof(pass));
         strncpy(pass, argv[2], strlen(argv[2]));
