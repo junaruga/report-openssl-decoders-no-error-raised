@@ -131,6 +131,7 @@ int main(int argc, char *argv[])
     ERR_clear_error();
     pkey = ossl_pkey_read_generic(bio, pass);
     if (!pkey) {
+        status = EXIT_FAILURE;
         printf("Couldn't get the pkey.\n");
         fprintf(stderr, "[DEBUG] errors start.\n");
         ERR_print_errors_fp(stderr);
