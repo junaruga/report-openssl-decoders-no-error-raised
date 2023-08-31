@@ -104,15 +104,14 @@ int main(int argc, char *argv[])
     fips_enabled = EVP_default_properties_is_fips_enabled(NULL);
     printf("FIPS enabled: %s\n", (fips_enabled) ? "yes" : "no");
 
-    memset(data, 0x00, sizeof(data));
-    memset(&data_size, 0x00, sizeof(data_size));
-
-
     if ((fp = fopen(argv[1], "r")) == NULL) {
         status = EXIT_FAILURE;
         fprintf(stderr, "[DEBUG] Failed to open the pkey file.\n");
         goto end;
     }
+
+    memset(data, 0x00, sizeof(data));
+    memset(&data_size, 0x00, sizeof(data_size));
     if ((data_size = fread(data, 1, sizeof(data), fp)) == 0) {
         status = EXIT_FAILURE;
         fprintf(stderr, "[DEBUG] Failed to read the pkey file.\n");
