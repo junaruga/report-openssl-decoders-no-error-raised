@@ -1,0 +1,10 @@
+OPENSSL_CONF_INCLUDE=/home/jaruga/.local/openssl-3.2.0-dev-fips-debug-cf712830b7/ssl \
+OPENSSL_MODULES=/home/jaruga/.local/openssl-3.2.0-dev-fips-debug-cf712830b7/lib/ossl-modules \
+LD_LIBRARY_PATH=/home/jaruga/.local/openssl-3.2.0-dev-fips-debug-cf712830b7/lib \
+./pkey_ec ./key-AES-128-CBC.pem "abcdef"
+pass: abcdef
+Loaded providers:
+  default
+FIPS enabled: no
+Got a pkey! 0x24ac910
+It's held by the provider default

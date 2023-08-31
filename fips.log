@@ -1,0 +1,21 @@
+OPENSSL_CONF=/home/jaruga/.local/openssl-3.2.0-dev-fips-debug-cf712830b7/ssl/openssl_fips.cnf \
+OPENSSL_CONF_INCLUDE=/home/jaruga/.local/openssl-3.2.0-dev-fips-debug-cf712830b7/ssl \
+OPENSSL_MODULES=/home/jaruga/.local/openssl-3.2.0-dev-fips-debug-cf712830b7/lib/ossl-modules \
+LD_LIBRARY_PATH=/home/jaruga/.local/openssl-3.2.0-dev-fips-debug-cf712830b7/lib \
+./pkey_ec ./key-AES-128-CBC.pem "abcdef"
+[DEBUG] errors start.
+4097B944017F0000:error:1E08010C:DECODER routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:102:No supported data to decode. Input type: DER
+4097B944017F0000:error:0308010C:digital envelope routines:inner_evp_generic_fetch:unsupported:crypto/evp/evp_fetch.c:342:Global default library context, Algorithm (MD5 : 100), Properties ()
+4097B944017F0000:error:03000086:digital envelope routines:evp_md_init_internal:initialization error:crypto/evp/digest.c:272:
+4097B944017F0000:error:0308010C:digital envelope routines:inner_evp_generic_fetch:unsupported:crypto/evp/evp_fetch.c:342:Global default library context, Algorithm (MD5 : 100), Properties ()
+4097B944017F0000:error:03000086:digital envelope routines:evp_md_init_internal:initialization error:crypto/evp/digest.c:272:
+4097B944017F0000:error:1E08010C:DECODER routines:OSSL_DECODER_from_bio:unsupported:crypto/encode_decode/decoder_lib.c:102:No supported data to decode. Input type: PEM
+4097B944017F0000:error:0308010C:digital envelope routines:inner_evp_generic_fetch:unsupported:crypto/evp/evp_fetch.c:342:Global default library context, Algorithm (MD5 : 100), Properties ()
+4097B944017F0000:error:03000086:digital envelope routines:evp_md_init_internal:initialization error:crypto/evp/digest.c:272:
+[DEBUG] errors end.
+pass: abcdef
+Loaded providers:
+  fips
+  base
+FIPS enabled: yes
+Couldn't get the pkey.
