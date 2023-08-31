@@ -1,0 +1,8 @@
+title = "gitleaks config"
+
+[allowlist]
+description = "global allow list"
+paths = [
+    # Ignore the key.pem in the root of the repo.
+    '''key-AES-128-CBC\.pem$''',
+]
